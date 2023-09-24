@@ -25,6 +25,7 @@ public class Main {
         System.out.println(triangleType(5, 4, 5));
         System.out.println(triangleType(3, 4, 5));
         System.out.println(triangleType(5, 1, 1));
+        System.out.println(triangleType(0, 0, 0));
 
     // Задание 5:
         System.out.println("\nЗадание 5:");
@@ -78,6 +79,10 @@ public class Main {
     public static String triangleType(int x, int y, int z) {
         String answer = null;
 
+        if (x == 0 && y == 0 && z == 0) {
+            return "not a triangle";
+        }
+
         if (x > y + z || y > x + z || z > x + y) {
             answer = "not a triangle";
         } else {
@@ -95,7 +100,7 @@ public class Main {
 
     public static int ternaryEvalution(int x, int y) {
         return (x > y) ? x : y;
-    }
+    } // условный оператор или тернарный оператор.
 
     public static int howManyItems(double k, double w, double h) {
         int i = 0;
@@ -123,7 +128,7 @@ public class Main {
     public static int gcd(int x, int y) {
         int end = 0;
 
-        if (x > y) {
+        if (x < y) {
             end = x;
         } else {
             end = y;
